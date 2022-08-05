@@ -20,7 +20,7 @@ class Animal {
     /**
      * Makes the animal drink.
      */
-    drink() {
+    drink(): void {
         console.log(`The ${this.getAnimalTypeName()} called ${this.name} drinks`);
     }
 
@@ -29,7 +29,7 @@ class Animal {
      * 
      * @param {string} newName The new name of the animal.
      */
-    rename(newName: string) {
+    rename(newName: string): void {
         console.log(`${this.name} was renamed to ${newName}`);
         this.name = newName;
     }
@@ -39,7 +39,7 @@ class Animal {
      * 
      * @returns The animal name.
      */
-    getName() {
+    getName(): string {
         return this.name;
     }
 
@@ -48,7 +48,7 @@ class Animal {
      * 
      * @returns A string representation of the animal type.
      */
-    getAnimalTypeName() {
+    getAnimalTypeName(): string {
         switch (this.animalType) {
             case AnimalType.Cat:
                 return "cat";
